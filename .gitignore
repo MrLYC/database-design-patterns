@@ -55,3 +55,12 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# temp
+*.bak
+*.tmp
+*.*~
+
+# virtualenv
+demo-venv/
+.dev/activate
