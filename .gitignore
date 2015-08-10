@@ -64,3 +64,4 @@ target/
 # virtualenv
 demo-venv/
 .dev/activate
+demo/db.sqlite3
