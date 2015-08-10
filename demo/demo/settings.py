@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     # design patterns
     'article_with_meta',
     'linked_list',
+    'composite_pattern',
 )
 
 MIDDLEWARE_CLASSES = (
