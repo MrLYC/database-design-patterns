@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'linked_list',
     'composite_pattern',
     'tag_and_group',
+    'dynamic_link',
 )
 
 MIDDLEWARE_CLASSES = (
