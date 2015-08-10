@@ -65,3 +65,4 @@ target/
 demo-venv/
 .dev/activate
 demo/db.sqlite3
+migrations/
