@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'article_with_meta',
     'linked_list',
     'composite_pattern',
+    'tag_and_group',
 )
 
 MIDDLEWARE_CLASSES = (
