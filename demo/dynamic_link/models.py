@@ -1,7 +1,9 @@
+from ycyc.collections.tagmaps import TagMaps
 from django.db import models
 
 
 class OrderCreater(models.Model):
+    Creaters = TagMaps()
     id = models.BigIntegerField(primary_key=True)
 
     class Meta:
@@ -14,14 +16,16 @@ class Order(models.Model):
 
     @property
     def creater(self):
-        for create_cls in OrderCreater.__subclasses__():
-            if create_cls.Type == self.create_by:
-                return create_cls.objects.get(id=self.creater_id)
+        create_cls = OrderCreater.Creaters.get(self.create_by)
+        if create_cls.Type == self.create_by:
+            return create_cls.objects.get(id=self.creater_id)
 
 
+@OrderCreater.Creaters.register("Manager")
 class Manager(OrderCreater):
-    Type = "Manager"
+    pass
 
 
+@OrderCreater.Creaters.register("Customer")
 class Customer(OrderCreater):
-    Type = "Customer"
+    pass
