@@ -6,7 +6,7 @@ class ArticleMeta(models.Model):
         max_length=255, db_index=True,
         null=False, blank=False, default=None,
     )
-    authot = models.CharField(
+    author = models.CharField(
         max_length=255, null=False,
         blank=False, default=None,
     )
